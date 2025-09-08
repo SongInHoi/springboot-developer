@@ -38,3 +38,24 @@ if (modifyButton) {
             });
     });
 }
+
+// 등록 기능
+// id가 create-btn인 엘리먼트를 조회
+const createButton = document.getElementById("create-btn");
+if(createButton) {
+    createButton.addEventListener("click", (event) => { // 클릭 이벤트가 발생하면
+        fetch("/api/articles", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+                title: document.getElementById("title").value,
+                content:document.getElementById("content").value,
+            }),
+        }).then(() => {
+            alert("등록 완료되었습니다.");
+            location.replace("/articles");
+        });
+    });
+}
