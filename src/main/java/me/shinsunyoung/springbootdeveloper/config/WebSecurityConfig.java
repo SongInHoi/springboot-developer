@@ -1,3 +1,4 @@
+/*
 package me.shinsunyoung.springbootdeveloper.config;
 
 import me.shinsunyoung.springbootdeveloper.service.UserDetailService;
@@ -70,3 +71,4 @@ public class WebSecurityConfig {
         return new BCryptPasswordEncoder();
     }
 }
+*/
